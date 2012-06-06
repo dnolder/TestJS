@@ -10,7 +10,7 @@ function start(route, handle) {
 
         route(handle, pathname, response, request);
 
-    }).listen(3001, '127.0.0.1');
+    }).listen(process.env['app_port'] || 3001, '127.0.0.1');
     
     console.log('Server running at http://127.0.0.1:3001/, Node version: ',process.version);
 }
